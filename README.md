@@ -31,7 +31,7 @@ Data should be stored in the following format:
 # Solution
 The solution developed on docker and using the Airflow pipeline orchestrator: 
 
-![Aiflow](./images/airflow.jpg)
+![Aiflow](./images/airflow1.jpg)
 
 Using mysql for data storage :
 
