@@ -29,26 +29,34 @@ Data should be stored in the following format:
 | `created_at` | `timestamp` |
 
 # Solution
-Para a solução fiz todo o desenvolvimento em docker  e o orquestrador ultilizado foi  o Airflow:
+The solution developed on docker and using the Airflow pipeline orchestrator: 
 
 ![Aiflow](./images/airflow.jpg)
-Gravando os dados no banco de dados Mysql:
+Usando mysql para armazenamento dos dados :
+
+Using mysql for data storage :
 
 ![mysql](./images/mysql.jpg)
 
-Com a seguinte estrutura para ambas tabelas :
+table structure :
 
 ![estrutura](./images/diesel.jpg)
 
-A quantidade de linhas é a seguinte:
+row quantity:
 
 `dev_fuel` = 54.432
 
 `diesel` = 12.960
 
-Tambem fiz o armazenamento do dados em  [Data_Enginner_test/data](https://github.com/radsonpatrick/Data_Enginner_test/tree/main/data) lá temos output em `csv` das tabelas de combustiveis derivados [dev_fuel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/dev_fuel.csv) e a de diesel [diesel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/diesel.csv) 
+the data storage is also located on [Data_Enginner_test/data](https://github.com/radsonpatrick/Data_Enginner_test/tree/main/data) the output format on `csv` from Sales of oil derivative fuels [dev_fuel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/dev_fuel.csv) and Sales of diesel [diesel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/diesel.csv) 
+
 
 # How to run
+
+## Requirements
+* [Docker](https://docs.docker.com/engine/install/ubuntu/)
+* [Docker-compose](https://docs.docker.com/compose/install/)
+
 `git clone https://github.com/radsonpatrick/Data_Enginner_test.git`
 
 `cd Data_Enginner_test`
