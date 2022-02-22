@@ -38,17 +38,17 @@ Using mysql for data storage :
 
 ![mysql](./images/mysql.jpg)
 
-table structure :
+Table structure :
 
 ![estrutura](./images/diesel.jpg)
 
-row quantity:
+Row quantity:
 
 `dev_fuel` = 54.432
 
 `diesel` = 12.960
 
-the data storage is also located on [Data_Enginner_test/data](https://github.com/radsonpatrick/Data_Enginner_test/tree/main/data) the output format on `csv` from Sales of oil derivative fuels [dev_fuel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/dev_fuel.csv) and Sales of diesel [diesel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/diesel.csv) 
+The data storage is also located on [Data_Enginner_test/data](https://github.com/radsonpatrick/Data_Enginner_test/tree/main/data) the output format on `csv` from Sales of oil derivative fuels [dev_fuel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/dev_fuel.csv) and Sales of diesel [diesel.csv](https://github.com/radsonpatrick/Data_Enginner_test/blob/main/data/diesel.csv) 
 
 
 # How to run
