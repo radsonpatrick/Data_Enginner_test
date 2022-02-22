@@ -57,4 +57,4 @@ Tambem fiz o armazenamento do dados em  [Data_Enginner_test/data](https://github
 
 `docker-compose up`
 
-After installation acess on broser `http://localhost:8080`
+After installation acess on browser `http://localhost:8080`
