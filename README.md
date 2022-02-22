@@ -29,7 +29,7 @@ Data should be stored in the following format:
 | `created_at` | `timestamp` |
 
 # Solution
-Para a solução fiz todo o desenvolvimento do pipeline em docker ultilizando o Airflow:
+Para a solução fiz todo o desenvolvimento em docker  e o orquestrador ultilizado foi  o Airflow:
 
 ![Aiflow](./images/airflow.jpg)
 Gravando os dados no banco de dados Mysql:
