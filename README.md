@@ -32,7 +32,6 @@ Data should be stored in the following format:
 The solution developed on docker and using the Airflow pipeline orchestrator: 
 
 ![Aiflow](./images/airflow.jpg)
-Usando mysql para armazenamento dos dados :
 
 Using mysql for data storage :
 
