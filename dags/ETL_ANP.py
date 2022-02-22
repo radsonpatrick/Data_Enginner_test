@@ -36,7 +36,7 @@ def csv_convert(TableName,sheetName):
      df1.columns = ['product', 'uf', 'volume', 'year_month','unit','created_at']
      df1.to_csv( f'./raw_data/{TableName}.csv')
    
-def sqlDataLoad(TableName):
+def sql_data_load(TableName):
     engine = create_engine("mysql+pymysql://{user}:{pw}@mysql/{db}"
                        .format(user="root",
                                pw="airflow",
@@ -76,9 +76,9 @@ with DAG("ETL_ANP",start_date = datetime(2022,1,1), schedule_interval="@daily", 
         python_callable=csv_convert,
         op_kwargs={'sheetName': 2, 'TableName': 'diesel'},dag=dag)
 
-    sqlDataLoadDiesel = PythonOperator(
-         task_id='sqlDataLoadDiesel', 
-         python_callable=sqlDataLoad,
+    sql_data_load_diesel = PythonOperator(
+         task_id='sql_data_load_diesel', 
+         python_callable=sql_data_load,
          op_kwargs={'TableName': 'diesel'}) 
     
     csv_convert_dev_fuel = PythonOperator(
@@ -86,11 +86,11 @@ with DAG("ETL_ANP",start_date = datetime(2022,1,1), schedule_interval="@daily", 
         python_callable=csv_convert,
         op_kwargs={'sheetName': 1, 'TableName': 'dev_fuel'},dag=dag)
 
-    sqlDataLoadDevFuel = PythonOperator(
-         task_id='sqlDataLoadDevFuel', 
-         python_callable=sqlDataLoad,
+    sql_data_load_dev_fuel = PythonOperator(
+         task_id='sql_data_load_dev_fuel', 
+         python_callable=sql_data_load,
          op_kwargs={'TableName': 'dev_fuel'}) 
     
         
-download_archive>>xls_to_ods>>csv_convert_dev_fuel>>csv_convert_diesel>>sqlDataLoadDevFuel>>sqlDataLoadDiesel
+download_archive>>xls_to_ods>>csv_convert_dev_fuel>>csv_convert_diesel>>sql_data_load_dev_fuel>>sql_data_load_diesel
 
